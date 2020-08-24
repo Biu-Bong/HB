@@ -1,1 +1,661 @@
+以下所有修改步骤均出自以下大佬：
+1.siayylove  https://www.studyhb.cn/
+2.萨塔尼亚  https://tieba.baidu.com/p/6453209736
+3.鸽骑丨米  https://tieba.baidu.com/p/6457793213
+4.wjhwjhn    https://tieba.baidu.com/p/6457464814
 
+一、工具安装
+
+我使用的是的是Visual Studio Code软件
+
+官方下载地址：https://code.visualstudio.com/
+
+
+
+安装后修改中文方法：
+1.打开软件
+2.使用快捷键Ctrl + Shift + P，打开相关设置功能菜单，选择Configure Display Language
+3.此时，菜单变为两个选项，分别是en和Install additional languages，选择第二个
+4.在左侧弹出可以安装相关的语言插件，选择中文简体，点击Install
+5.安装完毕后，提示需要重启工具，点击Restart Now进行重启，重启完毕后，工具显示为中文简体。
+
+二、兄弟设置
+在兄弟根目录新建一个文本文档，输入以下内容并保存。
+
+
+@echo off
+set d=%date%
+date 2020-1-19
+cd /d %~dp0
+start Hearthbuddy.exe
+ping -n 5 127.0.0.1>nul
+date %d%
+
+将文件名改为xxx.bat（名称随意，但是扩展名一定要是bat），双击bat文件运行兄弟。（注意：要先启动炉石，否则兄弟会报错）
+
+1.点击下箭头，选择炉石兄弟的默认策略
+
+
+2.在插件列表中取消日常任务增强插件的勾选
+
+
+3.在策略中选择怼脸模式
+
+
+做完上述操作后关闭兄弟。
+
+三、添加留牌策略
+
+1.新建 _mulligan.txt（注意路径）
+
+
+2.书写留牌策略
+打开_mulligan.txt，添加以下内容并保存（内容过长，只部分截图）
+
+
+AT_079;pala;None;Hold:1;/
+LOOT_093;pala;None;Hold:1;/
+EX1_349;pala;None;Discard:2;/
+AT_073;pala;None;Discard:2;/
+FP1_020;pala;None;Discard:2;/
+EX1_130;pala;None;Discard:2;/
+EX1_136;pala;None;Discard:2;/
+EX1_379;pala;None;Discard:2;/
+LOOT_149;pala;None;Hold:2;/
+CS2_087;pala;None;Discard:2;/
+LOOT_529;pala;None;Discard:2;/
+UNG_960;pala;None;Hold:1;/
+BOT_906;pala;None;Hold:1;/
+ICC_038;pala;None;Hold:1;/
+UNG_809;pala;None;Hold:1;/
+LOOT_286;pala;None;Hold:1;/
+
+
+CFM_696;shaman;None;Discard:2;/
+GVG_038;shaman;None;Discard:2;/
+CS2_039;shaman;None;Discard:2;/
+
+
+KAR_073;shaman;pala;Hold:1;/
+KAR_073;shaman;mage;Discard:2;/
+KAR_073;shaman;priest;Discard:2;/
+KAR_073;shaman;hunter;Hold:1;/
+KAR_073;shaman;warrior;Discard:2;/
+KAR_073;shaman;warlock;Discard:2;/
+KAR_073;shaman;shaman;Discard:2;/
+KAR_073;shaman;druid;Discard:2;/
+KAR_073;shaman;thief;Discard:2;/
+
+
+CS2_046;shaman;None;Discard:2;/
+TRL_520;shaman;None;Discard:2;/
+DAL_077;shaman;None;Discard:2;/
+EX1_507;shaman;None;Discard:2;/
+EX1_103;shaman;None;Discard:2;/
+GIL_600;shaman;None;Discard:2;/
+TRL_352;shaman;None;Discard:2;/
+DAL_710;shaman;None;Discard:2;/
+EX1_241;shaman;None;Discard:2;/
+
+
+None;mage;None;Discard:2;3
+//艾露尼斯
+LOOT_108;mage;None;Hold:1;/
+CS2_031;mage;None;Discard:2;/
+EX1_295;mage;None;Discard:2;/
+//EX1_287;mage;None;Discard:2;/
+//奥秘法
+//暗金教侍从
+CFM_066;mage;None;Hold:2;/
+//肯瑞托
+EX1_612;mage;None;Hold:1;/
+//奥秘
+EX1_287;mage;None;Hold:1;CFM_066/EX1_612
+LOOT_101;mage;None;Hold:1;CFM_066/EX1_612
+EX1_295;mage;None;Hold:1;CFM_066/EX1_612
+ULD_239;mage;None;Hold:1;CFM_066/EX1_612
+CFM_620;mage;None;Hold:1;CFM_066/EX1_612
+//男仆
+KAR_092;mage;None;Discard:2;/
+//火把
+LOE_002;mage;None;Discard:2;/
+//对空
+ULD_240;mage;shaman;Hold:1;/
+ULD_240;mage;pala;Discard:2;/
+ULD_240;mage;mage;Discard:2;/
+ULD_240;mage;priest;Discard:2;/
+ULD_240;mage;hunter;Hold:1;/
+ULD_240;mage;warrior;Discard:2;/
+ULD_240;mage;warlock;Discard:2;/
+ULD_240;mage;druid;Discard:2;/
+ULD_240;mage;thief;Discard:2;/
+//秘法学家
+UNG_020;mage;None;Hold:1;/
+//科学家
+FP1_004;mage;None;Hold:1;/
+
+
+EX1_609;hunter;None;Hold:1;/
+ICC_200;hunter;None;Discard:2;/
+EX1_554;hunter;None;Discard:2;/
+GIL_577;hunter;None;Discard:2;/
+TRL_339;hunter;None;Discard:2;/
+EX1_539;hunter;None;Discard:2;/
+EX1_617;hunter;None;Discard:2;/
+CFM_315;hunter;None;Hold:2;/
+LOOT_080;hunter;None;Hold:1;/
+EX1_610;hunter;None;Hold:1;LOOT_080
+EX1_609;hunter;None;Hold:1;LOOT_080
+ICC_200;hunter;None;Hold:1;LOOT_080
+EX1_554;hunter;None;Hold:1;LOOT_080
+GIL_577;hunter;None;Hold:1;LOOT_080
+EX1_611;hunter;None;Hold:1;LOOT_080
+CS2_146;hunter;None;Discard:2;NEW1_025
+EX1_554;hunter;None;Discard:2;/
+KAR_004;hunter;None;Discard:2;/
+BRM_013;hunter;None;Discard:2;/
+GVG_043;hunter;None;Hold:1;NEW1_025/CS2_146/CFM_315
+EX1_539;hunter;None;Discard:2;/
+EX1_162;hunter;None;Hold:1;NEW1_025/CS2_146/CFM_315
+EX1_162;hunter;None;Discard:2;/
+FP1_004;hunter;None;Hold:2;CS2_146/NEW1_025/CFM_315/GAME_005
+FP1_004;hunter;None;Hold:1;/
+EX1_538;hunter;None;Discard:2;/
+ICC_419;hunter;None;Discard:2;/
+DS1_070;hunter;None;Discard:2;/
+EX1_536;hunter;None;Discard:2;/
+EX1_116;hunter;None;Discard:2;/
+UNG_915;hunter;None;Hold:1;TRL_348
+UNG_915;hunter;None;Hold:1;CFM_315
+UNG_915;hunter;None;Discard:2;/
+None;hunter;priest;Discard:2;4
+ICC_419;hunter;priest;Hold:2;/
+NEW1_031;hunter;priest;Hold:1;/
+NEW1_031;hunter;None;Hold:1;GAME_005
+CFM_637;hunter;None;Discard:2;/
+BOT_035;hunter;None;Hold:1;/
+GVG_085;hunter;None;Discard:2;/
+BOT_021;hunter;None;Discard:2;/
+
+
+EX1_610;hunter;pala;Hold:1;/
+EX1_610;hunter;thief;Discard:2;/
+EX1_610;hunter;warrior;Discard:2;/
+EX1_610;hunter;warlock;Discard:2;/
+EX1_610;hunter;shaman;Discard:2;/
+EX1_610;hunter;mage;Discard:2;/
+EX1_610;hunter;priest;Discard:2;/
+EX1_610;hunter;druid;Discard:2;/
+EX1_610;hunter;hunter;Discard:2;/
+LOOT_079;hunter;pala;Hold:1;/
+LOOT_079;hunter;thief;Hold:1;/
+LOOT_079;hunter;hunter;Hold:1;/
+LOOT_079;hunter;warrior;Discard:2;/
+LOOT_079;hunter;warlock;Discard:2;/
+LOOT_079;hunter;shaman;Discard:2;/
+LOOT_079;hunter;mage;Discard:2;/
+LOOT_079;hunter;priest;Discard:2;/
+LOOT_079;hunter;druid;Discard:2;/
+EX1_611;hunter;pala;Discard:2;/
+EX1_611;hunter;thief;Discard:2;/
+EX1_611;hunter;hunter;Hold:1;/
+EX1_611;hunter;warrior;Discard:2;/
+EX1_611;hunter;warlock;Hold:1;/
+EX1_611;hunter;shaman;Discard:2;/
+EX1_611;hunter;mage;Discard:2;/
+EX1_611;hunter;priest;Discard:2;/
+EX1_611;hunter;druid;Discard:2;/
+BRM_013;hunter;None;Discard:2;/
+BOT_251;hunter;None;Discard:2;/
+EX1_556;hunter;None;Discard:2;/
+BOT_033;hunter;None;Discard:2;/
+BOT_438;hunter;None;Discard:2;/
+
+
+None;warlock;None;Discard:2;3
+BOT_224;warlock;None;Discard:2;/
+BOT_263;warlock;None;Discard:2;/
+BOT_568;warlock;None;Discard:2;/
+EX1_308;warlock;None;Discard:2;/
+EX1_302;warlock;None;Discard:2;/
+UNG_205;warlock;None;Discard:2;/
+ICC_092;warlock;None;Discard:2;/
+UNG_809;warlock;None;Hold:1;/
+UNG_809;warlock;None;Discard:2;EX1_319/CS2_065/LOOT_014
+EX1_105;warlock;None;Hold:2;/
+EX1_043;warlock;None;Hold:2;/
+LOOT_014;warlock;None;Hold:1;/
+LOOT_014;warlock;None;Discard:2;EX1_319/CS2_065
+CS2_065;warlock;None;Hold:1;/
+CS2_065;warlock;None;Discard:2;EX1_319
+EX1_319;warlock;None;Hold:1;/
+
+
+None;thief;None;Discard:2;3
+UNG_928;thief;warlock;Hold:1;/
+UNG_928;thief;pala;Hold:1;/
+UNG_928;thief;hunter;Hold:1;/
+UNG_928;thief;mage;Discard:2;/
+UNG_928;thief;priest;Discard:2;/
+UNG_928;thief;warrior;Discard:2;/
+UNG_928;thief;shaman;Discard:2;/
+UNG_928;thief;druid;Discard:2;/
+UNG_928;thief;thief;Discard:2;/
+CS2_073;thief;None;Discard:2;/
+CS2_074;thief;None;Discard:2;/
+GIL_534;thief;None;Hold:1;CS2_146
+GIL_534;thief;None;Hold:1;LOOT_258
+GIL_534;thief;None;Hold:1;EX1_008
+GIL_534;thief;None;Hold:1;UNG_809
+UNG_075;thief;None;Hold:1;CS2_146
+UNG_075;thief;None;Hold:1;LOOT_258
+UNG_075;thief;None;Hold:1;EX1_008
+UNG_075;thief;None;Hold:1;UNG_809
+CS2_146;thief;None;Hold:1;/
+CS2_146;thief;None;Discard:2;LOOT_258
+CS2_146;thief;None;Discard:2;EX1_008
+CS2_146;thief;None;Discard:2;UNG_809
+EX1_134;thief;None;Discard:2;/
+ICC_092;thief;None;Hold:1;EX1_008
+ICC_092;thief;None;Hold:1;UNG_809
+ICC_092;thief;None;Hold:1;LOOT_258
+ICC_092;thief;None;Discard:2;/
+
+
+ICC_912;priest;NONE;Hold:2;/
+UNG_928;priest;NONE;Discard:2;/
+GIL_143;priest;NONE;Discard:2;/
+TRL_512;priest;NONE;Discard:2;/
+
+
+
+
+DAL_256;druid;NONE;Discard:2;/
+BOT_420;druid;NONE;Hold:2;/
+DAL_733;druid;NONE;Hold:2;/
+CS2_012;druid;druid;Hold:1;/
+
+四、修改基础卡数据
+
+1.麦迪文男仆KAR_092基础数据
+
+打开XML文档
+
+
+Ctrl+F搜索KAR_092并往下翻
+
+
+
+
+
+
+        <Tag enumID="203" value="1" />
+        <Tag enumID="199" value="4" />
+        <Tag enumID="321" value="1" />
+        <Tag enumID="114" value="0" />
+        <Tag enumID="48" value="2" />
+        <Tag enumID="45" value="3" />
+        <Tag enumID="47" value="2" />
+        <Tag enumID="202" value="4" />
+        <Tag enumID="330" value="0" />
+        <Tag enumID="331" value="0" />
+        <ReferencedTag enumID="219"  value="1"/>
+        <PlayRequirement reqID="59" param="1" />
+        <PlayRequirement reqID="22" param="" />
+    <PlayRequirement reqID="9" param="" />
+
+2.云雾王子ULD_293基础数据
+
+
+
+
+<Tag enumID="45"  value="4"/>
+        <Tag enumID="47"  value="4"/>
+        <Tag enumID="48"  value="5"/>
+        <Tag enumID="183"  value="1158"/>
+        <Tag enumID="199"  value="4"/>
+        <Tag enumID="200"  value="18"/>
+        <Tag enumID="202"  value="4"/>
+        <Tag enumID="203"  value="1"/>
+        <Tag enumID="218"  value="1"/>
+        <Tag enumID="321"  value="1"/>
+        <ReferencedTag enumID="219"  value="1"/>
+        <PlayRequirement reqID="59" param="1" />
+        <PlayRequirement reqID="22" param="" />
+      <PlayRequirement reqID="9" param="" />
+
+五、添加sim卡数据
+
+1.对空奥术法师SIM_ULD_240
+
+在兄弟根目录使用搜索功能找到文件并打开
+
+
+将全部内容替换为图中内容
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HREngine.Bots
+{
+    class Sim_ULD_240 : SimTemplate //* 对空奥术法师 Arcane Flakmage
+    {
+        //After you play a <b>Secret</b>, deal 2 damage to all enemy minions.
+        //在你使用一张<b>奥秘</b>牌后，对所有敌方随从造成2点伤害。
+        public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool ownplay, Minion m)
+        {
+            int dmg = (ownplay) ? p.getSpellDamageDamage(2) : p.getEnemySpellDamageDamage(2);
+    
+            if (m.own == ownplay && hc.card.Secret) p.allMinionOfASideGetDamage(!ownplay, dmg, true);
+
+        }
+    }
+}
+
+2.火焰结界SIM_ULD_239
+
+将全部内容替换为图中内容
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HREngine.Bots
+{
+    class Sim_ULD_239 : SimTemplate //* 火焰结界 Flame Ward
+    {
+        //<b>Secret:</b> After a minion attacks your hero, deal $3 damage to all enemy minions.
+        //<b>奥秘：</b>在一个随从攻击你的英雄后，对所有敌方随从造成$3点伤害。
+        public override void onSecretPlay(Playfield p, bool ownplay, int number)
+        {
+            int dmg = (ownplay) ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
+            p.allMinionOfASideGetDamage(!ownplay, dmg);
+        }
+
+    }
+}
+
+3.爆炸符文SIM_LOOT_101
+
+将全部内容替换为图中内容
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+
+namespace HREngine.Bots
+{
+    class Sim_LOOT_101 : SimTemplate //* 爆炸符文 Explosive Runes
+    {
+        //<b>Secret:</b> After your opponent plays a minion, deal $6 damage to it and any excess to their hero.
+        //<b>奥秘：</b>在你的对手使用一张随从牌后，对该随从造成$6点伤害，超过其生命值上限的伤害将由对方英雄承受。
+    public override void onSecretPlay(Playfield p, bool ownplay, Minion target, int number)
+    {
+        int dmg = (ownplay) ? p.getSpellDamageDamage(6) : p.getEnemySpellDamageDamage(6);
+ 
+        p.minionGetDamageOrHeal(target, dmg);
+    }
+
+    }
+}
+
+4.云雾王子SIM_ULD_293
+
+将全部内容替换为图中内容
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+
+namespace HREngine.Bots
+{
+    class Sim_ULD_293 : SimTemplate //* 云雾王子 Cloud Prince
+    {
+        //<b>Battlecry:</b> If you control a <b>Secret</b>, deal 6 damage.
+        //<b>战吼：</b>如果你控制一个<b>奥秘</b>，则造成6点伤害。
+    public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+    {
+        if (target != null) p.minionGetDamageOrHeal(target, 6);
+ 
+    }
+
+    }
+}
+
+5.艾露尼斯SIM_LOOT_108
+
+将全部内容替换为图中内容
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HREngine.Bots
+{
+    class Sim_LOOT_108 : SimTemplate //* 艾露尼斯 Aluneth
+    {
+        //At the end of your turn, draw 3 cards.
+        //在你的回合结束时，抽三张牌。
+    CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.LOOT_108);
+ 
+    public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+    {
+        p.equipWeapon(weapon, ownplay);
+    }
+
+    }
+}
+
+六、添加惩罚
+
+打开PenalityManager.cs文件
+
+
+
+在如图所示处添加代码
+
+
+
+                //暗金教侍从
+                case CardDB.cardName.kaballackey:
+                    foreach (Handmanager.Handcard hc in p.owncards)
+                    {
+                        if (p.ownMaxMana == 1 && hc.card.Secret) return -50;
+                    }
+                    break;
+                //对空奥术法师
+                case CardDB.cardName.对空奥术法师:
+                    if (p.enemyMinions.Count < 2) return 10;
+                    break;
+                //疯狂的科学家
+                case CardDB.cardName.madscientist: return -6;
+                //麦迪文的男仆
+                case CardDB.cardName.medivhsvalet:
+                    if (p.ownSecretsIDList.Count < 1) return 80;
+                    if (target.isHero) return -5;
+                    break;
+                //复制
+                case CardDB.cardName.duplicate:
+                    bool found1 = false;
+                    foreach (Minion mnn1 in p.ownMinions)
+                    {
+                        if (mnn1.name == CardDB.cardName.kabalcrystalrunner || mnn1.name == CardDB.cardName.云雾王子) found1 = true;
+                    
+                    }
+                    if (found1) return -10;
+                    
+                    else return -5;
+                    break;
+                 //寒冰屏障
+                case CardDB.cardName.iceblock: 
+                    if (p.ownHero.Hp < 15) return -8;
+                    else return -3;
+                    break;
+                //法术反制
+                case CardDB.cardName.counterspell: return -6;
+                //火焰结界
+                case CardDB.cardName.火焰结界:
+                    if (p.enemyMinions.Count == 2) return -8;
+                    if (p.enemyMinions.Count == 3) return -12;
+                    if (p.enemyMinions.Count >= 4) return -15;
+                    else return -3;
+                    break;
+                //爆炸符文
+                case CardDB.cardName.爆炸符文: return -8;
+                //云雾王子
+                case CardDB.cardName.云雾王子:
+                    if (p.ownSecretsIDList.Count < 1) return 80;
+                    if (target.isHero) return -5;
+                    break;
+                //艾露尼斯
+                case CardDB.cardName.艾露尼斯:
+                    if (p.owncards.Count >= 7) return 500;
+                    else return -90;
+                    break;
+                //火冲
+                case CardDB.cardName.fireblast:
+                    if (target.isHero) return -2;
+                    else return -1;
+                    break;
+
+七、策略调整
+
+打开Behavior怼脸模式.cs文件
+
+
+
+添加如图所示代码
+
+
+
+if(a.card.card.type == CardDB.cardtype.SPELL && a.card.card.name == CardDB.cardName.fireball && (a.target.isHero && !a.target.own)) retval += 2;
+if (a.card.card.type == CardDB.cardtype.SPELL && a.card.card.name == CardDB.cardName.roaringtorch && (a.target.isHero && !a.target.own)) retval += 2;
+if(a.card.card.Secret) retval += 5;
+
+八、修改橙武
+
+打开CardDB.cs文件
+
+
+
+原代码如图
+
+
+
+将其改为下图所示代码
+
+
+
+
+
+case  185: {
+                                    while ((index1 = s.IndexOf("<enUS>")) == -1)
+                                    {
+                                        s = reader.ReadLine();
+                                    }
+                                    index1 += 6;
+                                    index2 = s.IndexOf("</enUS>", index1);
+                                    temp = s.Substring(index1, index2 - index1);
+                                    sb.Clear();
+                                    sb.Append(temp);
+                                    sb.Replace("<", "");
+                                    sb.Replace("b>", "");
+                                    sb.Replace("/b>", "");
+                                    sb.Replace("'", "");
+                                    sb.Replace(" ", "");
+                                    sb.Replace(":", "");
+                                    sb.Replace(".", "");
+                                    sb.Replace("!", "");
+                                    sb.Replace("?", "");
+                                    sb.Replace("-", "");
+                                    sb.Replace("_", "");
+                                    sb.Replace(",", "");
+                                    sb.Replace("(", "");
+                                    sb.Replace(")", "");
+                                    sb.Replace("/", "");
+                                    sb.Replace("\"", "");
+                                    c.name = this.cardNamestringToEnum(sb.ToString().ToLower());
+                                    if(c.name == CardDB.cardName.unknown)
+                                    {
+                                        // try chinese
+
+                                        while ((index1 = s.IndexOf("<zhCN>")) == -1)
+                                        {
+                                            s = reader.ReadLine();
+                                        }
+                                        index1 += 6;
+                                        index2 = s.IndexOf("</zhCN>", index1);
+                                        temp = s.Substring(index1, index2 - index1);
+                                        sb.Clear();
+                                        sb.Append(temp);
+                                        sb.Replace("<", "");
+                                        sb.Replace("b>", "");
+                                        sb.Replace("/b>", "");
+                                        sb.Replace("'", "");
+                                        sb.Replace(" ", "");
+                                        sb.Replace(":", "");
+                                        sb.Replace(".", "");
+                                        sb.Replace("!", "");
+                                        sb.Replace("?", "");
+                                        sb.Replace("-", "");
+                                        sb.Replace("_", "");
+                                        sb.Replace(",", "");
+                                        sb.Replace("(", "");
+                                        sb.Replace(")", "");
+                                        sb.Replace("/", "");
+                                        sb.Replace("\"", "");
+                                        c.name = this.cardNamestringToEnum(sb.ToString().ToLower());
+                                        if(c.name == CardDB.cardName.unknown)
+                                        {
+                                            //Helpfunctions.Instance.ErrorLog("[卡牌导入] 未识别的卡牌 :" + sb.ToString().ToLower());
+                                            ;
+                                        }
+                                    }
+                                }                                       break; //durability
+
+注意：此处极其容易出错，如果复制代码后产生错误，请采取手动方式将代码输入进去
+
+九、附录
+
+奥秘法卡组（个人卡组）
+
+
+
+### 奥秘法
+# 职业：法师
+# 模式：狂野模式
+#
+# 2x (1) 暗金教侍从
+# 2x (2) 对空奥术法师
+# 2x (2) 疯狂的科学家
+# 2x (2) 秘法学家
+# 2x (2) 麦迪文的男仆
+# 1x (3) 变形药水
+# 1x (3) 复制
+# 1x (3) 寒冰屏障
+# 2x (3) 法术反制
+# 2x (3) 火焰结界
+# 2x (3) 爆炸符文
+# 2x (3) 老旧的火把
+# 2x (3) 肯瑞托法师
+# 2x (4) 火球术
+# 2x (5) 云雾王子
+# 2x (6) 暗金教水晶侍女
+# 1x (6) 艾露尼斯
+# 
+AAEBAf0EBMABiQ7ZuwKi0wINcbsC7AX3DboW17YC67oCh70CwcECj9MCvqQDv6QD3akDAA==
+# 
+# 想要使用这副套牌，请先复制到剪贴板，然后在游戏中点击“新套牌”进行粘贴。
